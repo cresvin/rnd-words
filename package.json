@@ -1,10 +1,17 @@
 {
   "name": "rnd-words",
   "license": "MIT",
+  "description": "A simple tool to generate random words with optional numbers and customizable separators.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "module": "dist/index.mjs",
   "version": "1.0.0",
+  "author": "Oliwier Tkacz <otkacz.buissnes@gmail.com>",
+  "files": [
+    "dist"
+  ],
+  "repository": "https://github.com/cresvin/rnd-words.git",
+  "homepage": "https://github.com/cresvin/rnd-words#readme",
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
@@ -15,5 +22,13 @@
     "prettier": "^3.3.3",
     "tsup": "^8.2.4",
     "typescript": "^5.6.2"
-  }
+  },
+  "keywords": [
+    "random word generator",
+    "word generator",
+    "random words",
+    "typescript",
+    "random numbers",
+    "string generator"
+  ]
 }
