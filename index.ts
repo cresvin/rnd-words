@@ -25,11 +25,19 @@ const WORDS = [
   "chair", "table", "window", "door", "bed", "camera",
 ] as const;
 
-export function generate(numberOfWords = 3, separator: string = "-") {
+function generateRandomNumbers(): number {
+  return Math.floor(Math.random() * 100);
+}
+
+export function generate(
+  numberOfWords: number = 3,
+  separator: string = "-",
+  randomNumbers: boolean = true
+): string {
   const result: string[] = [];
 
   if (numberOfWords < 1) {
-    throw new Error("Invalid number of words");
+    throw new Error("Number of words must be at least 1.");
   } else if (numberOfWords > WORDS.length) {
     throw new Error(
       `Requested number of words exceeds the maximum limit of ${WORDS.length}.`
@@ -41,5 +49,8 @@ export function generate(numberOfWords = 3, separator: string = "-") {
     result.push(WORDS[randomIndex] as string);
   }
 
-  return result.join(separator);
+  const baseResult = result.join(separator);
+  return randomNumbers
+    ? `${baseResult}${separator}${generateRandomNumbers()}`
+    : baseResult;
 }
