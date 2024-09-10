@@ -6,7 +6,8 @@
   "module": "dist/index.mjs",
   "version": "0.0.1",
   "scripts": {
-    "build": "tsup index.ts --format cjs,esm --dts",
+    "build": "tsup",
+    "dev": "tsup --watch",
     "format": "prettier --write .",
     "lint": "tsc"
   },
