@@ -10,6 +10,11 @@
   "files": [
     "dist"
   ],
+  "exports": {
+    "types": "./dist/index.d.ts",
+    "import": "./dist/index.mjs",
+    "require": "./dist/index.js"
+  },
   "repository": "https://github.com/cresvin/rnd-words.git",
   "homepage": "https://github.com/cresvin/rnd-words#readme",
   "scripts": {
